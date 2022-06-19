@@ -19,6 +19,12 @@ cv.imshow('canny', canny)
 canny_blur = cv.Canny(blur, 125, 175)
 cv.imshow('canny_blur', canny_blur)
 
-37:35
+# Dilating the image
+dilated = cv.dilate(img, (3,3), iterations=1)
+cv.imshow('dilated', dilated)
+
+# Cropping
+cropped = img[500:600, 600:700]
+cv.imshow('cropped', cropped)
 
 cv.waitKey(0)
